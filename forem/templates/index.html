@@ -1,9 +1,295 @@
-{% extends 'base.html'%}
-{%block title%}
-      Home page
-{%endblock%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alumini forum</title>
+    <script src="https://kit.fontawesome.com/4ce11a0f80.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
 
-{%block content%}
-        This is our homepage
-{%endblock%}
-      
+      .button{
+        margin:10px;
+        color:white;
+        background-color:blue;
+        display:inline-block;
+        text-align: center;
+        text-decoration: none;
+        padding-left:10px;
+        padding-right:10px;
+        border-radius: 5px;
+      }
+      .button a{
+        color:white;
+        text-decoration: none;
+      }
+     .button a:hover{
+        color: white;
+      }
+
+@media (max-width: 63.9375em) {
+  .hide-for-mobiles {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+.content{
+  background-color: #EAEDED;
+  display: flex;
+}
+.head{
+  padding: 36px 0;
+  padding-top: 0;
+  margin: 0;
+  }
+.question{
+  background-color:#ffff;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 22px;
+  box-sizing: border-box
+}
+.discription{
+  font-size:  14px;
+  margin: 0;
+}
+
+.footer {
+    margin-top:100px;
+  background-color:#34495E ;
+  padding: 30px;
+  font-family: 'Lato', sans-serif;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+@media (max-width: 63.9375em) {
+  .footer {
+    text-align: center;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "logo links1 links2"
+ "social  weblink copyright";
+    gap: 10px;
+    justify-items: start;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__logo {
+    grid-area: logo;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__social {
+    grid-area: social;
+  }
+  .footer__social a {
+    display: inline-block;
+  }
+}
+
+.footer__social a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@media (max-width: 63.9375em) {
+  .footer__social {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__links a:not(:last-child) {
+    margin-right: 5px;
+  }
+  .footer__links.cols1 {
+    grid-area: links1;
+    display: inline;
+  }
+  .footer__links.cols2 {
+    grid-area: links2;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    display: inline;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .footer__links a {
+    display: block;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__weblink {
+    grid-area: weblink;
+  }
+  .footer__weblink a {
+    color: black;
+  }
+}
+
+@media (min-width: 64em) {
+  .footer__copyright {
+    grid-area: copyright;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .footer__copyright {
+    margin: 14px;
+  }
+}
+
+
+        body{
+            background-color: #212121;
+            color:white;
+            margin:0px;
+        }
+        h3{
+            color:white;
+        }
+        .card{
+            background-color: white;
+            margin-top:100px ;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding:10px;
+            box-shadow:2px  black;
+            border-radius:3px;
+        }
+        .card2{
+            background-color: white;
+            margin-top:100px ;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding:10px;
+            box-shadow:2px  black;
+            border-radius:3px;
+        }
+        
+        .card3{
+            background-color: white;
+            margin-top:100px ;
+            margin-left: 200px;
+            margin-right: 200px;
+            padding:30px;
+            box-shadow:2px  black;
+            border-radius:3px;
+        }
+        
+        
+        
+
+
+        
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    
+    <div class="card">
+        
+       <center>
+        <img src="where i go.jpg" alt="where i go"> 
+        <div class="text-white bg-dark">
+            <h3>DONT KNOW WHERE IS THE WAY TO GO?</h3>
+     
+        </div>
+        
+        </center>
+     
+       
+    
+    </div>
+   <center>
+    <div class="card2">
+        <img src="we create.jpg" alt="where i go"> 
+    </div>
+   </center>
+ <div class="card3">
+     <h3>As a student, you want to pursue a career path that aligns with your values, passions and skills, but that's not always possible on their own.
+     </br></br> Finding the right career path becomes even more difficult if your parents or friends are putting pressure on you.
+   <br/></br>students may lack in knowledge about the available oppurtunities .
+   </br></br> A correct guidence at times by a EXPERIENCED  PERSON person could definitely help the students acheive their dreams and goals.
+   </br></br>Think about where you want to work and get a career guidence from our own ALUMINIES!</h3>
+ </div>  
+<center>
+
+  <div class="button">
+    <a href=""><h3>ask to Alumini</h3></a>
+  </div>
+</center>
+
+
+   <footer class="footer">
+    <div class="container">
+           <a href="#" class="footer__logo">
+              <p>AluminiForum</p>
+           </a>
+           <div class="footer__social">
+               <a href="#"> <img src="images/icon-facebook.svg" alt=""></a>
+               <a href="#"> <img src="images/icon-instagram.svg" alt=""></a>
+               <a href="#"> <img src="images/icon-pinterest.svg" alt=""></a>
+               <a href="#"> <img src="images/icon-twitter.svg" alt=""></a>
+               <a href="#"> <img src="images/icon-youtube.svg" alt=""></a>
+           </div>
+
+           <div class="footer__links cols1">
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+           </div>
+
+           <div class="footer__links cols2">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Disclaimer</a>
+           </div>
+
+           <div class="footer__weblink">
+               <a href="#">Alumini Forum</a>
+           </div>
+
+           <div class="footer__copyright">
+            ©Alumini Forum. All Rights Reserved.
+           </div>
+    </div>
+    </footer>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    
+</body>
+</html>
