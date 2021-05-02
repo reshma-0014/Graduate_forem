@@ -1,0 +1,17 @@
+img {
+    position:absolute;
+    right:50px:
+}
+.bg{
+    padding: 10px;
+    background-color: seagreen;
+    border: 1px solid rgba(86, 61, 124,.2);
+}
+
+.grid-layouts.container{
+    border: 1px solid rgb(204, 23, 17)  !important;
+}
+body{
+    background-color: #212121;
+
+}

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>alumini forum</title>
-    <script src="https://kit.fontawesome.com/4ce11a0f80.js" crossorigin="anonymous"></script>
+{% extends 'base.html'%}
+{%block title%}
+      Home page
+{%endblock%}
+
+ {%block head%}
+      <script src="https://kit.fontawesome.com/4ce11a0f80.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <style>
 
@@ -174,11 +173,11 @@
 
         body{
             background-color: #212121;
-            color:white;
+            color:black;
             margin:0px;
         }
         h3{
-            color:white;
+            color:black;
         }
         .card{
             background-color: white;
@@ -215,17 +214,17 @@
 
         
     </style>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
-    
-    <div class="card">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/stylesheet.css">
+ {%endblock%}
+
+{%block content%}
+       <div class="card">
         
        <center>
-        <img src="where i go.jpg" alt="where i go"> 
-        <div class="text-white bg-dark">
-            <h3>DONT KNOW WHERE IS THE WAY TO GO?</h3>
+        <img src="static/images/where i go.jpg" alt="where i go"> 
+        <div>
+            <h3 style="color:black;">DONT KNOW THE WAY TO GO?</h3>
      
         </div>
         
@@ -236,11 +235,11 @@
     </div>
    <center>
     <div class="card2">
-        <img src="we create.jpg" alt="where i go"> 
+        <img src="static/images/we create.jpg" alt="where i go"> 
     </div>
    </center>
  <div class="card3">
-     <h3>As a student, you want to pursue a career path that aligns with your values, passions and skills, but that's not always possible on their own.
+     <h3 style="color:black;">As a student, you want to pursue a career path that aligns with your values, passions and skills, but that's not always possible on their own.
      </br></br> Finding the right career path becomes even more difficult if your parents or friends are putting pressure on you.
    <br/></br>students may lack in knowledge about the available oppurtunities .
    </br></br> A correct guidence at times by a EXPERIENCED  PERSON person could definitely help the students acheive their dreams and goals.
@@ -249,7 +248,7 @@
 <center>
 
   <div class="button">
-    <a href=""><h3>ask to Alumini</h3></a>
+    <a href="{{url_for('login_page')}}"><h3>ask to Alumini</h3></a>
   </div>
 </center>
 
@@ -260,11 +259,10 @@
               <p>AluminiForum</p>
            </a>
            <div class="footer__social">
-               <a href="#"> <img src="images/icon-facebook.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-instagram.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-pinterest.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-twitter.svg" alt=""></a>
-               <a href="#"> <img src="images/icon-youtube.svg" alt=""></a>
+               <a href="#"> <img src="static/images/icon-instagram.svg" alt=""></a>
+               <a href="#"> <img src="static/images/icon-pinterest.svg" alt=""></a>
+               <a href="#"> <img src="static/images/icon-twitter.svg" alt=""></a>
+               <a href="#"> <img src="static/images/icon-youtube.svg" alt=""></a>
            </div>
 
            <div class="footer__links cols1">
@@ -288,8 +286,6 @@
     </div>
     </footer>
 
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="jquery.js"></script>
-    
-</body>
-</html>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+{%endblock%}

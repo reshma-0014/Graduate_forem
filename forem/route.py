@@ -13,6 +13,9 @@ def home():
 def forem_page():
     return render_template('forem.html')
 
+@app.route('/about')
+def about_page():
+  return render_template('about.html')
 
 password_hash=" "
 @app.route('/register',methods=['GET','POST'])
@@ -22,7 +25,7 @@ def register_page():
            username=request.form['username']
            email=request.form['email_address']
            password=request.form['password1']
-           uid=4
+           uid=5
            password_hash = bcrypt.generate_password_hash(password).decode('utf-8')
 
            
